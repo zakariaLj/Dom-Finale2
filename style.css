@@ -1,0 +1,170 @@
+#listNav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+/* #exo-1 {
+    background-color: gainsboro;
+} */
+
+.d-none {
+    display: none;
+}
+
+.d-Block {
+    display: block;
+}
+/* 
+#exo-3 {
+    background-color: gainsboro;
+} */
+
+.carreRouge {
+    background-color: rgb(93, 95, 94);
+    height: 50PX;
+    width: 50px;
+    margin: 50px;
+    display: block;
+}
+
+#boutonMoove {
+    background-color: yellow;
+}
+
+/* #pageExo5 {
+    background-color: gainsboro;
+}
+ */
+
+/* Calculette niveau 1 */
+
+#calculetteNiveau1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.input-group mb-3 {
+    width: 20%;
+    height: 60px;
+    padding: 200px;
+}
+
+
+/* calculette Niveau 2 */
+
+#calculetteNV2 {
+    padding: 20px;
+    background-color: lightslategrey;
+}
+
+.button{
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Div principale de la calculette */
+#calculette {
+	/* Taille générale */
+	width : 155px;
+	height: auto;
+  vertical-align : middle;
+	
+	/* Marge */
+	margin 		 : 0px auto;
+	padding		 : 10px;
+	padding-bottom : 5px;
+	
+
+	/* Coin des bordures de l'élément */
+	border-radius : 3px;
+	
+	/* Police */
+	font  : bold 14px Arial, sans-serif;
+	color : #888;
+	
+	/* Effet 3D */
+	box-shadow : 0px 5px 5px 0px #2A4556;
+}
+
+
+/* Écran */
+.enteteCalculette .ecran {
+	/* Position générale */
+	height     : 35px;
+	width      : 115px;
+	float      : left;
+	
+
+	
+	/* Effet 3D */
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+	
+	/* Typographie de l'écran */
+	font-size     : 15px;
+	line-height   : 40px;
+	text-shadow   : 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align    : right;
+	padding-right : 5px;
+}
+
+/* Tout les caractères dépassant des touches ou de l'écran doivent être invisibles */
+.touchesCalculette, .enteteCalculette {
+	overflow : hidden;
+}
+
+/* Touches et écran */
+.touchesCalculette span, .enteteCalculette span.reset {
+	position:relative;
+
+	/* Formes générale des touches */
+	float        : left;
+	width        : 35px;
+	height       : 35px;
+	line-height  : 35px;
+	text-align   : center;
+	margin       : 0 5px 5px 0;
+	
+	/* Arrière plan */
+	background  : white;
+	border-radius : 3px;
+	
+	/* Pointeur de souris identiques aux lien hypertextes */
+	cursor: pointer;
+
+	/* Effet 3D */
+	box-shadow: 0px 3px 2px 0px #326682;
+	
+	/* Pas de selection des caractères des touches */
+	-khtml-user-select : none;
+	-webkit-user-select: none;
+	-moz-user-select   : -moz-none;
+	-ms-user-select    : none;
+	user-select        : none;
+
+	/* Flou CSS3 sur toutes les animations */
+	transition        : all 0.2s ease;
+	-webkit-transition: all .2s ease-in;
+    -moz-transition   : all .2s ease-in;
+    -o-transition     : all .2s ease-in;
+}
+
+/* Gestion particulière de la marge du bouton reset */
+.enteteCalculette span.reset {
+	margin: 0 0px 5px 0;
+}
+/* 

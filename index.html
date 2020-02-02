@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Exo Dom</title>
+</head>
+
+<body>
+    <!-- nav barre -->
+    <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand" href="#"></a>
+            <img style="width: 50px; height: 50px;" src="./image/comprendre-et-manipuler-le-dom-en-javascript.png"
+                alt="" srcset="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" id="home"> Javascript DOM <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+
+
+    </nav>
+    <!-- section nav -->
+    <section>
+
+        <ul class="list-group list-group-horizontal-md">
+            <li class="list-group-item"><a id="exo1" href="#">Exo 1</a> </li>
+            <li class="list-group-item"><a id="exo2" href="#">Exo 2</a></li>
+            <li class="list-group-item"><a id="exo3" href="#">Exo 3</a></li>
+            <li class="list-group-item"><a id="exo4" href="#">Exo 4</a></li>
+            <li class="list-group-item"><a id="exo5" href="#">Exo 5</a></li>
+            <li class="list-group-item"><a id="exo6" href="#">Exo 6</a></li>
+            <li class="list-group-item"><a id="exo7" href="#">Exo 7</a></li>
+        </ul>
+    </section>
+
+    <!-- page Exo -->
+    <div id="pageExo1" class="d-none" >
+        <div id="exo-1" class="bg-light py-5 px-5 my5 container">
+            <h2 id="titreH2">
+                Mon titre principale
+            </h2>
+            <p>liste des propriétés et methode sa retrouver dans la documentation</p>
+            <ul>
+                <li>innerText</li>
+                <li>innerHTML</li>
+                <li>querySelector()</li>
+                <li>QuerySelectorAll()</li>
+                <li>Style</li>
+                <li>classList</li>
+            </ul>
+            <p> Changer le contenu de h2 par" le titre modifié" <br> changer la couleur de h2 (la couleur que vous
+                voulez ajouter sera une classe bootstrap</p>
+            <button id="tryIt"> Try it </button>
+        </div>`
+
+    </div>
+    <div id="pageExo2" class="d-none">
+
+        <div class="bg-light py-5 px-5 my5 container">
+            <p>Mettre un écouteur d'événement sur les boutons nav</p>
+        </div>
+
+    </div>
+    <div id="pageExo3" class="d-none">
+
+        <div id="exo-3" class="bg-light py-5 px-5 my5 container">
+            <h2> Welcome <span id="SpanName">inconnu</span> </h2>
+            <p>Ecrivez dans l'input ci-dessous le nom de la personne que vous desirez acceuillir <br> Lorsque vous
+                cliquez sur le bouton " go",le nom que vous avez ajouter dans l'input sera alorsdans le span du h2 <br>
+                l'input sera alors vider de tout contenu.
+                <br> Attention interdiction de toucher a l'HTML</p>
+
+            <input type="text" id="entrerNom"> <button id="Btgo"> go </button>
+        </div>
+
+    </div>
+    <div id="pageExo4" class="d-none">
+
+        <div style="background-color: gainsboro; height: 1000px;margin: 30px;" class="bg-light py-5 px-5 my5 container">
+            <p style="color: rgb(5, 27, 32);"> Déplacer</p>
+
+            <div style="display: flex; justify-content: space-around;">
+                <div style="background-color: rgb(60, 155, 99);display: flex; height: 200px; width: 200px;">
+
+                    <div id="carreRouge1">
+                        1
+                    </div>
+                </div>
+                <div
+                    style="background-color :rgb(60, 155, 99) ;height: 200px; width: 200px; display: flex;justify-content: center;">
+
+                    <div id="carreRouge2">
+                        2
+                    </div>
+                </div>
+
+            </div>
+            <div style="display: flex;justify-content:center;">
+                <button id="bouttonChng"> change the position</button>
+            </div>
+            <div style="display: flex;justify-content:center; margin-top: 20px;">
+                <button id="boutonMoove"> <span id="nbrMove"></span> nbr de Mooove</button>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+    <div id="pageExo5" class="d-none">
+        <div class="bg-light py-5 px-5 my5 container">
+            <div>
+                <span id="CompteurImg"></span>
+            </div>
+            <div>
+                <button id="Add"> Ajouter</button>
+                <button id="Delete">Supprimer un </button>
+                <button id="DeleteAll">Supprimer tout</button>
+            </div>
+            <div id="ImageDiv">
+                <div id="ImageChildDiv">
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div id="pageExo6" class="d-none">
+
+        <div class="bg-light py-5 px-5 my5 container">
+
+            <h2>Niveau 1</h2>
+            <div id="calculetteNiveau1">
+                <input type="number" name="" id="nbr1">
+                <select name="" id="selecte">
+                    <option id="addition" value="1"> + </option>
+                    <option id="soustraction" value="2">-</option>
+                    <option id="multi" value="3">*</option>
+                    <option id="div" value="4">/</option>
+
+                </select>
+
+                <input type="number" name="" id="nbr2">
+                <button id="equals"> = </button>
+                <button id="resultat" disabled="disabled"></button>
+            </div>
+            <div>
+                <h2>Niveau 2</h2>
+
+                <!-- Div principale de la calculette -->
+                <div id="calculette" style="width: 190px;">
+
+                    <!-- Entête de la calculette -->
+                    <div class="enteteCalculette">
+                        <div id="marqueModele">
+                            ZAKMATH 360
+                        </div>
+                        <div class="ecran">
+
+                        </div>
+                        <span class="reset">C</span>
+                    </div>
+
+                    <!-- Touches de la calculette -->
+                    <div class="touchesCalculette">
+
+                        <!-- Première ligne de touches de la calculette -->
+                        <span id="7">7</span>
+                        <span id="8">8</span>
+                        <span id="9">9</span>
+
+                        <span class="operateurs">-</span>
+
+                        <!-- Deuxième ligne de touches de la calculette -->
+                        <span id="4">4</span>
+                        <span id="5">5</span>
+                        <span id="6">6</span>
+
+                        <span class="operateurs">+</span>
+
+                        <!-- Troisième ligne de touches de la calculette -->
+                        <span id="1">1</span>
+                        <span id="2">2</span>
+                        <span id="3">3</span>
+
+                        <span class="operateurs">/</span>
+
+                        <!-- Quatrième ligne de touches de la calculette -->
+                        <span id="0" class="touchesBas">0</span>
+
+                        <span class="touchesBas">.</span>
+                        <span class="egal touchesBas">=</span>
+                        <span class="operateurs touchesBas">x</span>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div id="pageExo7" class="d-none ">
+
+        <div class="bg-light py-5 px-5 my5 container">
+            <h2>To do list</h2>
+            <div class="input-group mb-3">
+                <input id="inputTache" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="row">
+                <button id="all" type="button" class="btn btn-info d-block mx-2">ALL</button>
+                <button id="done" type="button" class="btn btn-info d-block mx-2">DONE</button>
+                <button id="toDo" type="button" class="btn btn-info d-block mx-2">TO DO</button>
+            </div>
+            <div id="divList" class="mt-3">
+                <ul id="list">
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
