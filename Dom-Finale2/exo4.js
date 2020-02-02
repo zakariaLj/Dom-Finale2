@@ -26,7 +26,9 @@ buttonChange.addEventListener('click', () => gotoChange(Crouge1, Crouge2));
 
 let addToMove = () => {
     compteur = 0;
-    BtNbrMove.innerHTML = `Nombre de tour = ${compteur}`
+    BtNbrMove.innerHTML = `Nombre de tour = ${compteur}`;
+    Crouge1.classList = 'carreRouge';
+    Crouge2.classList = 'd-none';
 }
 
 

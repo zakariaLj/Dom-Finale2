@@ -5,16 +5,20 @@ let done = document.getElementById('done');
 let toDo = document.getElementById('toDo');
 let tabList = [];
 let tabTache = [];
+
+
 let addList = () => {
     //Créer les éléments et styliser
     let check = document.createElement('input');
     check.type = 'checkbox';
+
     // tabCheck.push(check);
     let tache = document.createElement('h4');
     tache.innerHTML = `&nbsp ${inputTache.value} &nbsp`;
     tabTache.push(tache);
     let supp = document.createElement('button');
     supp.innerHTML = ' x ';
+
     // tabSupp.push(supp);
     let ligne = document.createElement('div');
     tabList.push(ligne);
@@ -22,12 +26,14 @@ let addList = () => {
     ligne.classList.add('flex-wrap');
     ligne.classList.add('align-items-center');
     ligne.classList.add('toDo');
+
     //Afficher les éléments
     list.appendChild(ligne);
     ligne.appendChild(check);
     ligne.appendChild(tache);
     ligne.appendChild(supp);
     inputTache.value = "";
+    
     //Supprimer éléments
     let remove = () => {
         supp.parentNode.remove();
@@ -46,12 +52,26 @@ let addList = () => {
     })
     //Modifier les tâches
     let edit = document.createElement('button');
+    let ok = document.createElement('button');
+    ok.innerHTML='ok';
     edit.innerHTML = 'Modifier';
     edit.classList.add('mx-3');
     ligne.appendChild(edit);
-    edit.addEventListener('click', ()=>{
+    let newTache = document.createElement('input');
+    edit.addEventListener('click', () => {
+        newTache.classList.add('mx-3');
+        ligne.replaceChild(newTache, tache);
+        ligne.replaceChild(ok, edit);
+        supp.classList.add('d-none');
+        ok.addEventListener('click', ()=>{
+            tache.innerText = newTache.value;
+            ligne.replaceChild(tache, newTache)
+            ligne.replaceChild(edit, ok);
+            supp.classList.remove('d-none');
+        })
     })
 }
+
 done.addEventListener('click', () => {
     for (let i = 0; i < tabList.length; i++) {
         if (tabList[i].classList.contains('toDo')) {
@@ -74,3 +94,18 @@ inputTache.addEventListener("keydown", () => {
         addList();
     }
 })
+
+
+toDo.addEventListener('click',()=>{
+    for (let i = 0; i < tabList.length; i++) {
+        if (tabList[i].classList.contains('done')) {
+            tabList[i].classList.remove('d-flex');
+            tabList[i].classList.add('d-none');
+        } else {
+            tabList[i].classList.add('d-flex');
+            tabList[i].classList.remove('d-none');
+        }
+    }
+})
+
+
